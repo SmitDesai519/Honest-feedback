@@ -10,8 +10,6 @@ export async function middleware(request: NextRequest) {
   const token = await getToken({ req: request });
   const url = request.nextUrl;
 
-  console.log("TOEND", token, url);
-
   // Redirect to dashboard if the user is already authenticated
   // and trying to access sign-in, sign-up, Verify or home page
   if (
